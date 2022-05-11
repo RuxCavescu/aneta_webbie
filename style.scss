@@ -29,6 +29,10 @@ body {
     padding: 100px 0;
 }
 
+// .main {
+//     width: 100%;
+// }
+
 .main__nav {
     display: flex;
     flex-direction: row;
@@ -85,21 +89,12 @@ body {
     color: white;
 
     h1 {
-        font-size: 3em;
+        font-size: 3rem;
         margin: 0;
-        font-weight: 400;
     }
 
-    &__text-name {
-        color: $green;
-        border-bottom: 5px solid white;
-        font-weight: 700;
-    }
-
-    &__text-about {
-        font-size: 2.5em;
-        margin-top: 10px;
-        font-weight: 400;
+    .header p {
+        font-size: 1.25rem;
     }
 }
 
@@ -108,7 +103,6 @@ body {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    padding-bottom: 0px;
 
     &-text {
         width: $content_width;
@@ -157,10 +151,6 @@ body {
     flex-direction: column;
     align-items: center;
 
-    h2 {
-        margin-top: 0px;
-        }
-
     &-graphics {
         display: flex;
         flex-direction: column;
@@ -194,12 +184,6 @@ body {
             align-items: center;
             margin: 0px;
         }
-
-    &-HTML {
-        p {
-            margin-right: 20px;
-        }
-    }
     }
 
     &_skill-name {
@@ -352,60 +336,61 @@ body {
 .contact {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
-    background-color: $green;
+    background-color: #54be90;
     color: white;
 
-    form {
-        width: 60%;
-        .contact__info {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-        }
-
-        .contact__item {
+    &__form-input {
+        display: flex;
+        flex-direction: row;
+        padding: 30px 0px;
+        &_item {
             display: flex;
             flex-direction: column;
-            padding: 0px 10px;
-            flex: 50%;
+            padding: 0px 20px;
 
-            & label {
-                margin-top: 40px;
-            }
+                &-message {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 0px 20px;
+                
+                        &-section {
+                            background-color: white;
+                            height: 200px;
+                            border: none;
+                            border-radius: 5px;
+                        }
+                
+                        & label {
+                            margin-bottom: 10px;
+                        }
+                
+                        & button {
+                            margin-top: 15px;
+                            padding: 15px 0px;
+                            background-color: #232323;
+                            color: white;
+                            font-size: 20px;
+                            border: none;
+                            border-radius: 5px;
+                        }
+                    }
 
-            & input {
-                border: none;
-                border-bottom: 1px solid white;
-                height: 2em;
-                background-color: $green;
-            }
-        }
-
-        .contact__message {
-            display: flex;
-            flex-direction: column;
-            padding: 10px 10px;
-            margin-top: 30px;
+                & label {
+                    margin-bottom: 10px;
+                }
 
                 & input {
-                    height: 200px;
+                    width: 400px;
+                    background-color: #54be90;
                     border: none;
-                    margin: 10px 0px;
-                }
-
-                & button {
-                    margin-top: 15px;
-                    padding: 15px 0px;
-                    background-color: #232323;
-                    color: white;
-                    font-size: 20px;
-                    border: none;
-                    border-radius: 5px;
-                }
-        }
+                    border-bottom: 1px solid white;
+                    
+                    }
+            }
+        } 
     }
-}
 
 .greeting {
     display: flex;

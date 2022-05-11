@@ -66,11 +66,19 @@ body h2 {
   color: white;
 }
 .header h1 {
-  font-size: 3rem;
+  font-size: 3em;
   margin: 0;
+  font-weight: 400;
 }
-.header .header p {
-  font-size: 1.25rem;
+.header__text-name {
+  color: #54be90;
+  border-bottom: 5px solid white;
+  font-weight: 700;
+}
+.header__text-about {
+  font-size: 2.5em;
+  margin-top: 10px;
+  font-weight: 400;
 }
 
 .container__work {
@@ -78,6 +86,7 @@ body h2 {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  padding-bottom: 0px;
 }
 .container__work-text {
   width: 50em;
@@ -121,6 +130,9 @@ body h2 {
   flex-direction: column;
   align-items: center;
 }
+.container__skills h2 {
+  margin-top: 0px;
+}
 .container__skills-graphics {
   display: flex;
   flex-direction: column;
@@ -150,6 +162,9 @@ body h2 {
   flex-direction: row;
   align-items: center;
   margin: 0px;
+}
+.container__skills-item-HTML p {
+  margin-right: 20px;
 }
 .container__skills_skill-name {
   display: flex;
@@ -285,36 +300,45 @@ body h2 {
 .contact {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #54be90;
   color: white;
 }
-.contact__form-input {
+.contact form {
+  width: 60%;
+}
+.contact form .contact__info {
   display: flex;
   flex-direction: row;
-  padding: 30px 0px;
+  flex-wrap: wrap;
 }
-.contact__form-input_item {
+.contact form .contact__item {
   display: flex;
   flex-direction: column;
-  padding: 0px 20px;
+  padding: 0px 10px;
+  flex: 50%;
 }
-.contact__form-input_item-message {
+.contact form .contact__item label {
+  margin-top: 40px;
+}
+.contact form .contact__item input {
+  border: none;
+  border-bottom: 1px solid white;
+  height: 2em;
+  background-color: #54be90;
+}
+.contact form .contact__message {
   display: flex;
   flex-direction: column;
-  padding: 0px 20px;
+  padding: 10px 10px;
+  margin-top: 30px;
 }
-.contact__form-input_item-message-section {
-  background-color: white;
+.contact form .contact__message input {
   height: 200px;
   border: none;
-  border-radius: 5px;
+  margin: 10px 0px;
 }
-.contact__form-input_item-message label {
-  margin-bottom: 10px;
-}
-.contact__form-input_item-message button {
+.contact form .contact__message button {
   margin-top: 15px;
   padding: 15px 0px;
   background-color: #232323;
@@ -322,15 +346,6 @@ body h2 {
   font-size: 20px;
   border: none;
   border-radius: 5px;
-}
-.contact__form-input_item label {
-  margin-bottom: 10px;
-}
-.contact__form-input_item input {
-  width: 400px;
-  background-color: #54be90;
-  border: none;
-  border-bottom: 1px solid white;
 }
 
 .greeting {
